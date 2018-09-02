@@ -105,37 +105,33 @@ body {
 .table table {
   width: 50%;
   text-align: left; }
-  .table table:first-child {
-    border-right: 1px solid #dcdcdc; }
-    .table table:first-child td {
-      vertical-align: middle; }
-      .table table:first-child td:nth-child(1) {
-        padding-left: 20px;
-        width: 22%; }
-      .table table:first-child td:nth-child(2) {
-        width: 26%; }
-      .table table:first-child td:nth-child(3) {
-        width: 26%; }
-      .table table:first-child td:nth-child(4) {
-        width: auto;
-        padding-right: 20px;
-        text-align: right; }
-  .table table:last-child {
-    border-right: 1px solid #dcdcdc; }
-    .table table:last-child td {
-      vertical-align: middle;
+  .table table:first-child td {
+    vertical-align: middle; }
+    .table table:first-child td:nth-child(1) {
+      padding-left: 20px;
+      width: 22%; }
+    .table table:first-child td:nth-child(2) {
+      width: 26%; }
+    .table table:first-child td:nth-child(3) {
+      width: 26%; }
+    .table table:first-child td:nth-child(4) {
+      width: auto;
+      padding-right: 20px;
       text-align: right; }
-      .table table:last-child td:nth-child(4) {
-        width: 22%;
-        padding-right: 20px; }
-      .table table:last-child td:nth-child(3) {
-        width: 26%; }
-      .table table:last-child td:nth-child(2) {
-        width: 26%; }
-      .table table:last-child td:nth-child(1) {
-        width: auto;
-        padding-left: 20px;
-        text-align: left; }
+  .table table:last-child td {
+    vertical-align: middle;
+    text-align: right; }
+    .table table:last-child td:nth-child(4) {
+      width: 22%;
+      padding-right: 20px; }
+    .table table:last-child td:nth-child(3) {
+      width: 26%; }
+    .table table:last-child td:nth-child(2) {
+      width: 26%; }
+    .table table:last-child td:nth-child(1) {
+      width: auto;
+      padding-left: 20px;
+      text-align: left; }
 
 .table__header {
   display: -webkit-box;
@@ -146,6 +142,8 @@ body {
   cursor: default; }
   .table__header table {
     font-weight: 500; }
+    .table__header table:first-child {
+      border-right: 1px solid #dcdcdc; }
     .table__header table tr {
       height: 40px; }
 
@@ -173,9 +171,16 @@ body {
     .table__body:hover::-webkit-scrollbar-thumb {
       background: #888; }
   .table__body table {
+    position: relative;
     font-weight: 300; }
-    .table__body table:last-child {
-      border: none; }
+    .table__body table:first-of-type {
+      border-right: 1px solid #dcdcdc;
+      right: 0px;
+      z-index: 1; }
+    .table__body table:last-of-type {
+      border-left: 1px solid #dcdcdc;
+      left: -1px;
+      z-index: 0; }
   .table__body tr {
     height: 20px;
     cursor: default;
