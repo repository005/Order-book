@@ -1,0 +1,131 @@
+.table {
+
+  table {
+    width: 50%;
+    text-align: left;
+
+    &:first-child {
+      td {
+        vertical-align: middle;
+    
+        &:nth-child(1) { 
+          padding-left: 20px;
+          width: 22%; 
+        }
+        &:nth-child(2) { 
+          width: 26%; 
+        }
+        &:nth-child(3) { 
+          width: 26%; 
+        }
+        &:nth-child(4) { 
+          width: auto; 
+          padding-right: 20px;
+          text-align: right;
+        }
+      }
+    }
+
+    &:last-child {
+      td {
+        vertical-align: middle;
+        text-align: right;
+    
+        &:nth-child(4) { 
+          width: 22%; 
+          padding-right: 20px;
+        }
+        &:nth-child(3) { 
+          width: 26%; 
+        }
+        &:nth-child(2) { 
+          width: 26%; 
+        }
+        &:nth-child(1) { 
+          width: auto; 
+          padding-left: 20px;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    border: 1px solid #dcdcdc;
+    cursor: default;
+
+      table {
+        font-weight: 500;
+
+        &:first-child {
+          border-right: 1px solid #dcdcdc;
+        }
+
+        tr {
+          height: 40px;
+        }
+      }
+    }
+
+    &__body {
+      display: flex;
+      height: 400px;
+      overflow-y: overlay;
+      overflow-x: hidden;
+      border: 1px solid #dcdcdc;
+      border-top: none;
+      position: relative;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+      &::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: transparent;
+
+        &:vertical:hover {
+          background: #555;
+        }
+      }
+
+      &:hover {
+        overflow-y: overlay;
+
+        &::-webkit-scrollbar-thumb {
+          background: #888; 
+        }
+      }
+
+      table {
+        position: relative;
+        font-weight: 300;
+
+        &:first-of-type {
+          border-right: 1px solid #dcdcdc;
+          right: 0px;
+          z-index: 1;
+        }
+        &:last-of-type {
+          border-left: 1px solid #dcdcdc;
+          left: -1px;
+          z-index: 0;
+        }
+      }
+
+      tr {
+        height: 20px;
+        cursor: default;
+        color: #444;
+
+        &:hover {
+          background: #eee;
+          color: #000;
+        }
+        &:active {
+          background: #ddd;
+        }
+      }
+    }
+  }

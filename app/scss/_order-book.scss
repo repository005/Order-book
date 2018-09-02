@@ -1,0 +1,41 @@
+.order-book {
+  padding: 0 15px 40px;
+  min-width: 900px;
+  max-width: 1920px;
+  background: #fff;
+  border: 1px solid #e5e6e8;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px #aaa;
+
+  &__control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    user-select: none;
+
+    h3 {
+      flex-grow: 1;
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    & > * {
+      margin-right: 12px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__icon {
+    width: 15px;
+    height: 15px;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: all ease .3s;
+    }
+  }
+}
