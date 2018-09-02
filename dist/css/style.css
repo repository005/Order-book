@@ -53,9 +53,10 @@ body {
   margin: 100px auto; }
 
 .order-book {
-  padding: 0 15px 40px;
   min-width: 900px;
   max-width: 1920px;
+  margin: auto;
+  padding: 0 15px 40px;
   background: #fff;
   border: 1px solid #e5e6e8;
   -webkit-border-radius: 5px;
